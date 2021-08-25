@@ -1,0 +1,24 @@
+name: deploy
+
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pull on and restart server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.D_HOST }}
+        username: ${{ secrets.D_USERNAME }}
+        key: ${{ secrets.D_KEY }}
+        passphrase: ${{ secrets.D_PASSPHRASE }}
+        script: |
+          # print info
+          whoami
+          # go to repo dir
+          cd /home/vovveti2/public_html/uiuc-course-calendar
+          # update
+          git fetch
+          git reset --hard origin/main
