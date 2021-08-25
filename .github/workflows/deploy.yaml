@@ -18,7 +18,7 @@ jobs:
           # print info
           whoami
           # go to repo dir
-          cd /home/vovveti2/public_html/uiuc-course-calendar
+          cd /home/myclasses/public_html/uiuc-course-calendar
           # update
           git fetch
           git reset --hard origin/main
