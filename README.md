@@ -1,1 +1,1 @@
-# uiuc-course-viewer
+# uiuc-course-calendar
