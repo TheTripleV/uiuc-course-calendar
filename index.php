@@ -232,11 +232,13 @@ foreach ($courses as $courseString) {
 
 <body>
     <h1><?php print getRedirEnv('givenName'); ?>'s class schedule</h1>
-
-    <h4> Courses with at least 1 unscheduled meeting: </h4>
-    <?php foreach($nonDrawableCourses as $meeting) : ?>
-        <p><b>- <?= $meeting["course_url"]? "<a href=\"{$meeting["course_url"]}\">{$meeting['subject']} {$meeting['num']}</a> {$meeting['section']}" : "${$meeting['subject']} {$meeting['num']} {$meeting['section']}" ?></b></p>
-    <?php endforeach ?>
+    
+    <?php if(count($nonDrawableCourses)) : ?>
+        <h4> Courses with at least 1 unscheduled meeting: </h4>
+        <?php foreach($nonDrawableCourses as $meeting) : ?>
+            <p><b>- <?= $meeting["course_url"]? "<a href=\"{$meeting["course_url"]}\">{$meeting['subject']} {$meeting['num']}</a> {$meeting['section']}" : "${$meeting['subject']} {$meeting['num']} {$meeting['section']}" ?></b></p>
+        <?php endforeach ?>
+    <?php endif ?>
 
     <div style"position:relative">
         <table>
