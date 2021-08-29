@@ -246,6 +246,7 @@ foreach ($courses as $courseString) {
                 <tr>
                     <td colspan="1">
                         made by Vasista (vovveti2@illinois.edu)
+                        <a href="https://github.com/TheTripleV/uiuc-course-calendar">[Code on Github]</a>
 
                         <?php foreach ($drawableMeetings as $meeting) : ?>
                             <?php
