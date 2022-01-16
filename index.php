@@ -2,8 +2,8 @@
 
 // PARAMS
 // --------
-$currentYear = "2021";
-$currentSemester = "fall";
+$currentYear = "2022";
+$currentSemester = "spring";
 
 $cellWidth = "10";
 $cellHeight = "6";
@@ -120,7 +120,8 @@ foreach ($courses as $courseString) {
     $xmlArr = json_decode($objJsonDocument, TRUE);
 
     $reqDate = substr(getRedirEnv('Shib-Authentication-Instant'), 0, 10);
-    $startDate = substr($xmlArr["startDate"], 0, 10);
+    // $startDate = substr($xmlArr["startDate"], 0, 10);
+    $startDate = substr($xmlArr["startDate"], 0, 8) . "01";
     $endDate = substr($xmlArr["endDate"], 0, 10);
 
     if (!(($startDate <= $reqDate) && ($reqDate <= $endDate))) {
