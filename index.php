@@ -35,7 +35,7 @@ function cached_file_get_contents($filename)
 {
     $cache_file = "./cache/" . urlencode($filename);
     if (file_exists($cache_file)) {
-        if (time() - filemtime($cache_file) > 86400) {
+        if (time() - filemtime($cache_file) > 604800) {
             // too old , re-fetch
             $cache = file_get_contents($filename);
             file_put_contents($cache_file, $cache);
