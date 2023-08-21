@@ -3,7 +3,7 @@
 // PARAMS
 // --------
 $currentYear = "2023";
-$currentSemester = "spring";
+$currentSemester = "fall";
 
 $cellWidth = "10";
 $cellHeight = "6";
