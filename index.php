@@ -2,8 +2,8 @@
 
 // PARAMS
 // --------
-$currentYear = "2023";
-$currentSemester = "fall";
+$currentYear = "2024";
+$currentSemester = "spring";
 
 $cellWidth = "10";
 $cellHeight = "6";
