@@ -2,8 +2,16 @@
 
 // PARAMS
 // --------
-$currentYear = "2024";
-$currentSemester = "spring";
+
+$currentMonth = date('n');
+$currentYear = date('Y');
+
+// Determine the current semester
+if ($currentMonth >= 8) {
+    $currentSemester = "fall";
+} else {
+    $currentSemester = "spring";
+}
 
 $cellWidth = "10";
 $cellHeight = "6";
